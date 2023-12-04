@@ -1,0 +1,38 @@
+{
+  "items": [
+    { "key": "ethan", "value": "ETHAN" },
+    { "key": "Ethan", "value": "ETHAN" },
+    { "key": "Ethan (Pensando)", "value": "ETHAN (Pensando)" },
+    { "key": "ethan (pensando)", "value": "ETHAN (Pensando)" },
+    { "key": "ethan pensando", "value": "ETHAN (Pensando)" },
+    { "key": "Ethan pensando", "value": "ETHAN (Pensando)" },
+    { "key": "alistair", "value": "ALISTAIR" },
+    { "key": "Alistair", "value": "ALISTAIR" },
+    { "key": "McGregor", "value": "ALISTAIR" },
+    { "key": "blackthorn", "value": "BLACKTHORN" },
+    { "key": "Blackthorn", "value": "BLACKTHORN" },
+    { "key": "Elara", "value": "ELARA" },
+    { "key": "elara", "value": "ELARA" },
+    { "key": "Narrador", "value": "NARRADOR" },
+    { "key": "narrador", "value": "NARRADOR" },
+
+    { "key": "ActIMessageStart", "value": "Ethan se encuentra tranquilamente en su habitación, leyendo un relato narrativo de fantasía medieval. Acaba el episodio. " },
+    { "key": "ActIMessageI", "value": "Jamás entenderé como nos hemos depreciado tanto como sociedad. ¿Cómo es posible que el honor hoy en día se mida en likes?" },
+    { "key": "ActIMessageII", "value": "Hay algo que se me pierde... Días aburridos, sin pasión ninguna, gente enfocada en una pantalla buscando dopamina constante... ¿Por qué? ¿A caso las facilidades que tenemos hoy en día nos están haciendo mal?" },
+    { "key": "ActIMessageIII", "value": " Pero no tiene sentido; tenemos todo el tiempo del mundo para vivir aventuras, llevar una vida llena de emociones y preferimos vivirla a través de una pantalla..." },
+    { "key": "ActIMessageIV", "value": "De repente, Ethan recuerda que mañana es lunes; debe volver al instituto, toca volver a la rutina, una rutina en la que se siente ahogado. Mientras mira por la ventana, una estrella fugaz recorre el inmenso vacío que es el cielo." },
+    { "key": "ActIMessageV", "value": "¿Una estrella fugaz? ¿Con tanta contaminación lumínica? Hace tanto tiempo no veía una... Será que es especial... ¡Voy a pedir un deseo!" },
+    { "key": "ActIMessageVI", "value": "¡Deseo vivir en una fantasía medieval!" },
+
+    { "key": "1op1", "value": "dialog 1 option 1" },
+    { "key": "1op2", "value": "dialog 1 option 2" },
+    { "key": "1op3", "value": "dialog 1 option 3" },
+
+    { "key": "2", "value": "dialog 2" },
+    { "key": "2txt", "value": "dialog 2 text" },
+
+    { "key": "3", "value": "dialog 3" },
+    { "key": "3txt", "value": "dialog 3 text" }
+    
+  ]
+}
