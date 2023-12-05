@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 
 public enum NodeFunctionsEnum { NONE, FADE_IN, FADE_OUT, FADE_IN_OUT, LOAD_PAPER_BUTTON, INTERACTABLE_PAPER_BUTTON, SWORD_SOUND,
 MUSIC_ACT1, MUSIC_ACT2, MUSIC_ACT3, MUSIC_ACT4, MUSIC_ACT5,
+DRINK_TEA_PUZZLE
 };
 public class EndNodeFunctions : MonoBehaviour
 {
     FadeFX fade;
     public Button paperButton;
+
+    [SerializeField] GameObject textTeaPuzzle;
+    [SerializeField] GameObject objTeaPuzzle;
+    [SerializeField] Image backgroundImg;
+    [SerializeField] Sprite casa;
     private void Start()
     {
         fade = FindObjectOfType<FadeFX>();
@@ -52,7 +58,10 @@ public class EndNodeFunctions : MonoBehaviour
                 MusicThemeActIV();
                 break;
             case NodeFunctionsEnum.MUSIC_ACT5:
-                MusicThemeActIV();
+                MusicThemeActV();
+                break;
+            case NodeFunctionsEnum.DRINK_TEA_PUZZLE:
+                DrinkTeaPuzzle();
                 break;
         }
     }
@@ -108,5 +117,11 @@ public class EndNodeFunctions : MonoBehaviour
     }
     void InteractablePaperButton() {
         paperButton.interactable = true;
+    }
+    void DrinkTeaPuzzle()
+    {
+        objTeaPuzzle.SetActive(true);
+        textTeaPuzzle.SetActive(true);
+        backgroundImg.sprite = casa;
     }
 }

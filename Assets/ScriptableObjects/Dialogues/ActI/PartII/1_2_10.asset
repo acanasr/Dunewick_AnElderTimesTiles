@@ -10,14 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fb7ddef03c1b324887312227d59fc8c, type: 3}
-  m_Name: 1_2_4
+  m_Name: 1_2_10
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 8a070c9ddf777d24f97b6aa98c55c449, type: 3}
+  background: {fileID: 21300000, guid: e3eaac4a6734f6e4194355b1932af8c5, type: 3}
   startNodeFunctionID: 
   endNodeFunctionID: 
-  keyName: ethan pensando
-  keyMessage: ActIPartIIMessageIV
+  keyName: amigo alistair
+  keyMessage: ActIPartIIMessageX
   speakers:
   - active: 0
     speaker: {fileID: 21300000, guid: 0993c36ef76b7ca41848801246607f18, type: 3}
-  nextDialogNode: {fileID: 11400000, guid: 496200d497f280440a618187191c9616, type: 2}
+  - active: 1
+    speaker: {fileID: 21300000, guid: b7def8dcf2c4dd64bb705cbdbc0dbf23, type: 3}
+  - active: 0
+    speaker: {fileID: 21300000, guid: c6456ed6597eea04f9b436e46a3e3d79, type: 3}
+  nextDialogNode: {fileID: 11400000, guid: 2bc426d0fe5a43640bd87fa25e4ca87a, type: 2}

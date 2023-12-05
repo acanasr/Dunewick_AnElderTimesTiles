@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fb7ddef03c1b324887312227d59fc8c, type: 3}
-  m_Name: 1_2_4
+  m_Name: 1_2_12
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 8a070c9ddf777d24f97b6aa98c55c449, type: 3}
-  startNodeFunctionID: 
+  background: {fileID: 21300000, guid: 861b26488859daa418a527629e6e7b0f, type: 3}
+  startNodeFunctionID: 02000000
   endNodeFunctionID: 
   keyName: ethan pensando
-  keyMessage: ActIPartIIMessageIV
+  keyMessage: ActIPartIIMessageXII
   speakers:
-  - active: 0
+  - active: 1
     speaker: {fileID: 21300000, guid: 0993c36ef76b7ca41848801246607f18, type: 3}
-  nextDialogNode: {fileID: 11400000, guid: 496200d497f280440a618187191c9616, type: 2}
+  nextDialogNode: {fileID: 11400000, guid: d59e8d52a91486d408cdd7319a862623, type: 2}
