@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/dialog.unity
+    path: Assets/Scenes/ActIPartI.unity
     guid: 701edf8a317637843bb0e51c6c6cb049
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

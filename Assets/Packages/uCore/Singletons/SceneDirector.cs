@@ -16,6 +16,10 @@ public class SceneDirector : MonoBehaviour {
     public void LoadScene(gameScenes scene) {
         SceneManager.LoadScene(scene.ToString());
     }
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
 
     /** Método LoadScene
      * Carga una escena de forma aditiva

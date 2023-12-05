@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb7ddef03c1b324887312227d59fc8c, type: 3}
+  m_Name: 1_2_2
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 861b26488859daa418a527629e6e7b0f, type: 3}
+  startNodeFunctionID: 
+  endNodeFunctionID: 
+  keyName: narrador
+  keyMessage: ActIPartIIMessageII
+  speakers:
+  - active: 0
+    speaker: {fileID: 21300000, guid: 0993c36ef76b7ca41848801246607f18, type: 3}
+  nextDialogNode: {fileID: 11400000, guid: 446800149c3f0d740acdb2c191071d74, type: 2}

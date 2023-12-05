@@ -79,4 +79,17 @@ public class FadeFX : MonoBehaviour {
         callback?.Invoke();
     }
 
+    public void FadeInAndOut(Action callback = null)
+    {
+        if (_isFading)
+            return;
+
+        _isFading = true;
+        StartCoroutine(CFade(1f, () =>
+        {
+            // Fade In complete, now initiate Fade Out
+            StartCoroutine(CFade(-1f, callback));
+        }));
+    }
+
 }

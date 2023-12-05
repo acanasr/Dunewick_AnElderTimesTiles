@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour {
 
@@ -41,6 +42,11 @@ public class DialogManager : MonoBehaviour {
         // Singleton stuff
         DontDestroyOnLoad(gameObject);
     }
+    EndNodeFunctions endNodeFunctions;
+    void Start()
+    {
+        endNodeFunctions = FindObjectOfType<EndNodeFunctions>();
+    }
 
     /** Inicia el dialogo desde un nodo concreto */
     public void startDialog(BaseNode node) {
@@ -50,13 +56,16 @@ public class DialogManager : MonoBehaviour {
 
     /** Control del siguietne dialogo */
     public void nextDialog() {
-        //If you have delegate function for when passing the node
-        if (_current.nextNodeDelegate != null)
+        foreach (NodeFunctionsEnum func in _current.endNodeFunctionID)
         {
-            // Call the assigned function
-            _current.nextNodeDelegate.Invoke();
+            endNodeFunctions.MyFunction(func);
         }
         nextDialog(((iHaveNextNode)_current).nextNode);
+
+        foreach (NodeFunctionsEnum func in _current.startNodeFunctionID)
+        {
+            endNodeFunctions.MyFunction(func);
+        }
     }
 
     /** Control del siguietne dialogo, pero especificando cual ;3 */

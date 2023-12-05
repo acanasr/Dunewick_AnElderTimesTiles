@@ -24,6 +24,11 @@
     { "key": "ActIMessageV", "value": "¿Una estrella fugaz? ¿Con tanta contaminación lumínica? Hace tanto tiempo no veía una... Será que es especial... ¡Voy a pedir un deseo!" },
     { "key": "ActIMessageVI", "value": "¡Deseo vivir en una fantasía medieval!" },
 
+    { "key": "ActIPartIIMessageI", "value": "¿Pero...?¡Que acaba de pasar! Debo estar en un sueño lúcido... o, ¿Será que soy el protagonista de la simulación? Imposible... en Jumanji nunca pasó todo tan rápido. " },
+    { "key": "ActIPartIIMessageII", "value": "Ethan está visiblemente anonadado, acelerado al haber sentido todo de una manera tan realista. " },
+    { "key": "ActIPartIIMessageIII", "value": "Por qué... no será que se ha hecho realidad lo de la estrella fugaz, ¿No? Es que un sueño esto no parece, vamos. Y esto es una choza medieval, de toda la vida, con un hedor a... ¿Alcohol? Pero bueno, choza medieval. Si esto fuese así... debo encontrar cualquier pista, ¿Yo quién soy?" },
+    { "key": "ActIPartIIMessageIV", "value": "Dios mío... Este Blackthorn debe ser todo un caballero. Pero... ¿Por qué estaría el papel bañado en lágrimas? " },
+
     { "key": "1op1", "value": "dialog 1 option 1" },
     { "key": "1op2", "value": "dialog 1 option 2" },
     { "key": "1op3", "value": "dialog 1 option 3" },

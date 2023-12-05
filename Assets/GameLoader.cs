@@ -18,4 +18,9 @@ public class GameLoader : MonoBehaviour
     {
         
     }
+
+    public void LoadNode(BaseNode node)
+    {
+        DialogManager.instance.startDialog(node);
+    }
 }

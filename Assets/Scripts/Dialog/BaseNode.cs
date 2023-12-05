@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEditor;
+using System;
+using System.Collections.Generic;
 
-public delegate void OnNextNodeDelegate();
 public abstract class BaseNode : ScriptableObject {
 
     [Header("Background:")]
     public Sprite background;
 
-    public OnNextNodeDelegate nextNodeDelegate;
-
+    public List<NodeFunctionsEnum> startNodeFunctionID;
+    public List<NodeFunctionsEnum> endNodeFunctionID;
 }
