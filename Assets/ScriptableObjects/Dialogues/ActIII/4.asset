@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb7ddef03c1b324887312227d59fc8c, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: d81817bfed06baa4e951e47efb6fb428, type: 3}
+  startNodeFunctionID: 
+  endNodeFunctionID: 
+  keyName: blackthorn
+  keyMessage: ActIIIMessageIV
+  speakers:
+  - active: 0
+    speaker: {fileID: 21300000, guid: 96da9de7cfcd90d47b194c910ffed500, type: 3}
+  - active: 1
+    speaker: {fileID: 21300000, guid: 914b30afaa978d04a829c0294c85aeec, type: 3}
+  nextDialogNode: {fileID: 11400000, guid: 5679bf2742804104f9e310ab2f3d4c6d, type: 2}

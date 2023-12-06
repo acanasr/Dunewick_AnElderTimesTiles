@@ -19,7 +19,7 @@ public class FadeFX : MonoBehaviour {
     }
 
     private Image _image;
-    private float _alpha;
+    public float _alpha;
     [SerializeField]
     private float _duration = 2.5f;
     private float _baseDuration;

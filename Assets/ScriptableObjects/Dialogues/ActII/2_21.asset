@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb7ddef03c1b324887312227d59fc8c, type: 3}
+  m_Name: 2_21
+  m_EditorClassIdentifier: 
+  background: {fileID: 21300000, guid: 02e0ef80bee6ed84ebf6a85fec823f88, type: 3}
+  startNodeFunctionID: 
+  endNodeFunctionID: 
+  keyName: elara
+  keyMessage: ActIIMessageXXI
+  speakers:
+  - active: 0
+    speaker: {fileID: 21300000, guid: e391fe45ec697a14aadd059e948f1bc0, type: 3}
+  - active: 1
+    speaker: {fileID: 21300000, guid: 170824b1a23a6fc4ea58b0128841c032, type: 3}
+  nextDialogNode: {fileID: 11400000, guid: da26e06001ffd79429f5170f111fa9d0, type: 2}

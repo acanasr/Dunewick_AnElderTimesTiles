@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: startNode
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 3eebf5e8e8b92374d84b720221d6af96, type: 3}
-  startNodeFunctionID: 02000000
+  startNodeFunctionID: 
   endNodeFunctionID: 
   keyName: Narrador
   keyMessage: ActIMessageStart

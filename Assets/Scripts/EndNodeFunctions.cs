@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public enum NodeFunctionsEnum { NONE, FADE_IN, FADE_OUT, FADE_IN_OUT, LOAD_PAPER_BUTTON, INTERACTABLE_PAPER_BUTTON, SWORD_SOUND,
 MUSIC_ACT1, MUSIC_ACT2, MUSIC_ACT3, MUSIC_ACT4, MUSIC_ACT5,
-DRINK_TEA_PUZZLE
+DRINK_TEA_PUZZLE,
+TRANSITION_ACTI_ACTII, TRANSITION_ACTII_ACTIII, TRANSITION_ACTIII_ACTIV, TRANSITION_ACTIV_ACTV
 };
 public class EndNodeFunctions : MonoBehaviour
 {
@@ -17,9 +19,27 @@ public class EndNodeFunctions : MonoBehaviour
     [SerializeField] GameObject objTeaPuzzle;
     [SerializeField] Image backgroundImg;
     [SerializeField] Sprite casa;
+
+    [SerializeField] TextMeshProUGUI ActText;
+    [SerializeField] BaseNode ActIStartNode;
+    [SerializeField] BaseNode ActIIStartNode;
+    [SerializeField] BaseNode ActIIIStartNode;
+    [SerializeField] BaseNode ActIVStartNode;
+    DialogManager dialogManager;
+
+
     private void Start()
     {
         fade = FindObjectOfType<FadeFX>();
+        dialogManager = FindObjectOfType<DialogManager>();
+        fade._alpha = 1.0f;
+        ActText.text = "Dunewick: An Elder Times Tiles";
+        Invoke("ActITextFadeOut",3.0f);
+    }
+    void ActITextFadeOut()
+    {
+        ActText.text = "";
+        fade.FadeOut(() => dialogManager.startDialog(ActIStartNode));
     }
     public void MyFunction(NodeFunctionsEnum NodeFunc)
     {
@@ -62,6 +82,15 @@ public class EndNodeFunctions : MonoBehaviour
                 break;
             case NodeFunctionsEnum.DRINK_TEA_PUZZLE:
                 DrinkTeaPuzzle();
+                break;
+            case NodeFunctionsEnum.TRANSITION_ACTI_ACTII:
+                TransitionActIActII();
+                break;
+            case NodeFunctionsEnum.TRANSITION_ACTII_ACTIII:
+                TransitionActIIActIII();
+                break;
+            case NodeFunctionsEnum.TRANSITION_ACTIII_ACTIV:
+                TransitionActIIIActIV();
                 break;
         }
     }
@@ -123,5 +152,46 @@ public class EndNodeFunctions : MonoBehaviour
         objTeaPuzzle.SetActive(true);
         textTeaPuzzle.SetActive(true);
         backgroundImg.sprite = casa;
+    }
+    void TransitionActIActII()
+    {
+        fade.FadeIn(() => ActText.text = "Dos semanas más tarde");
+        uCore.Audio.StopAllSoundtracks();
+        MusicThemeActII();
+        Invoke("EndTransitionActI", 5.0f);
+    }
+    void EndTransitionActI()
+    {
+        ActText.text = ""; 
+        dialogManager.startDialog(ActIIStartNode);
+        fade.FadeOut();
+    }
+
+
+    void TransitionActIIActIII()
+    {
+        fade.FadeIn(() => ActText.text = "Dos meses más tarde");
+        uCore.Audio.StopAllSoundtracks();
+        MusicThemeActIII();
+        Invoke("EndTransitionActII", 5.0f);
+    }
+    void EndTransitionActII()
+    {
+        ActText.text = "";
+        dialogManager.startDialog(ActIIIStartNode);
+        fade.FadeOut();
+    }
+    void TransitionActIIIActIV()
+    {
+        fade.FadeIn(() => ActText.text = "Un mes más tarde");
+        uCore.Audio.StopAllSoundtracks();
+        MusicThemeActIV();
+        Invoke("EndTransitionActIII", 5.0f);
+    }
+    void EndTransitionActIII()
+    {
+        ActText.text = "";
+        dialogManager.startDialog(ActIVStartNode);
+        fade.FadeOut();
     }
 }
