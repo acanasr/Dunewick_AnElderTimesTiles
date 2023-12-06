@@ -24,7 +24,7 @@ public class DropReceiver : MonoBehaviour
         {
             if (dropElementsList[i] == gameObj)
             {
-                if(Vector3.Distance(dropReceiverGO.transform.position, gameObj.transform.position) < 2)
+                if(Vector3.Distance(dropReceiverGO.transform.position, gameObj.transform.position) < 50)
                 {
                     ObjectDropped(gameObj);
                 }

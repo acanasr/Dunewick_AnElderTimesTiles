@@ -7,8 +7,8 @@ using TMPro;
 
 public enum NodeFunctionsEnum { NONE, FADE_IN, FADE_OUT, FADE_IN_OUT, LOAD_PAPER_BUTTON, INTERACTABLE_PAPER_BUTTON, SWORD_SOUND,
 MUSIC_ACT1, MUSIC_ACT2, MUSIC_ACT3, MUSIC_ACT4, MUSIC_ACT5,
-DRINK_TEA_PUZZLE,
-TRANSITION_ACTI_ACTII, TRANSITION_ACTII_ACTIII, TRANSITION_ACTIII_ACTIV, TRANSITION_ACTIV_ACTV
+DRINK_TEA_PUZZLE, FORGE_SWORD_PUZZLE,
+TRANSITION_ACTI_ACTII, TRANSITION_ACTII_ACTIII, TRANSITION_ACTIII_ACTIV, TRANSITION_ACTIV_ACTV, FINAL
 };
 public class EndNodeFunctions : MonoBehaviour
 {
@@ -25,8 +25,12 @@ public class EndNodeFunctions : MonoBehaviour
     [SerializeField] BaseNode ActIIStartNode;
     [SerializeField] BaseNode ActIIIStartNode;
     [SerializeField] BaseNode ActIVStartNode;
+    [SerializeField] BaseNode ActVStartNode;
     DialogManager dialogManager;
 
+
+    [SerializeField] GameObject textSwordPuzzle;
+    [SerializeField] GameObject objSwordPuzzle;
 
     private void Start()
     {
@@ -83,6 +87,9 @@ public class EndNodeFunctions : MonoBehaviour
             case NodeFunctionsEnum.DRINK_TEA_PUZZLE:
                 DrinkTeaPuzzle();
                 break;
+            case NodeFunctionsEnum.FORGE_SWORD_PUZZLE:
+                ForgeSwordPuzzle();
+                break;
             case NodeFunctionsEnum.TRANSITION_ACTI_ACTII:
                 TransitionActIActII();
                 break;
@@ -92,7 +99,17 @@ public class EndNodeFunctions : MonoBehaviour
             case NodeFunctionsEnum.TRANSITION_ACTIII_ACTIV:
                 TransitionActIIIActIV();
                 break;
+            case NodeFunctionsEnum.FINAL:
+                fade.FadeIn(()=> ActText.text = "THE END.   Done by Albert Cañas");
+                Invoke("Close", 5.0f);
+                break;
+
         }
+    }
+
+    void Close()
+    {
+        Application.Quit();
     }
     void SwordSound()
     {
@@ -153,6 +170,13 @@ public class EndNodeFunctions : MonoBehaviour
         textTeaPuzzle.SetActive(true);
         backgroundImg.sprite = casa;
     }
+
+    void ForgeSwordPuzzle()
+    {
+        textSwordPuzzle.SetActive(true);
+        objSwordPuzzle.SetActive(true);
+        backgroundImg.sprite = casa;
+    }
     void TransitionActIActII()
     {
         fade.FadeIn(() => ActText.text = "Dos semanas más tarde");
@@ -192,6 +216,20 @@ public class EndNodeFunctions : MonoBehaviour
     {
         ActText.text = "";
         dialogManager.startDialog(ActIVStartNode);
+        fade.FadeOut();
+    }
+
+    public void TransitionActIVActV()
+    {
+        fade.FadeIn(() => ActText.text = "Tres meses más tarde");
+        uCore.Audio.StopAllSoundtracks();
+        MusicThemeActV();
+        Invoke("EndTransitionActIV", 5.0f);
+    }
+    void EndTransitionActIV()
+    {
+        ActText.text = "";
+        dialogManager.startDialog(ActVStartNode);
         fade.FadeOut();
     }
 }

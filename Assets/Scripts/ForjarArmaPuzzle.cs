@@ -12,11 +12,16 @@ public class ForjarArmaPuzzle : DropReceiver
     [SerializeField] TextMeshProUGUI Text2;
     [SerializeField] TextMeshProUGUI Text3;
     [SerializeField] TextMeshProUGUI Text4;
+    [SerializeField] TextMeshProUGUI Text5;
 
     [SerializeField] GameObject Iron;
     [SerializeField] GameObject IronI;
     [SerializeField] GameObject IronII;
     [SerializeField] GameObject IronIII;
+    [SerializeField] GameObject SwordCold;
+    [SerializeField] GameObject ColdSwordInTable;
+    [SerializeField] GameObject Mango;
+    [SerializeField] GameObject FinishedSwordInTable;
 
     private void Update()
     {
@@ -28,10 +33,14 @@ public class ForjarArmaPuzzle : DropReceiver
                 switch (clicksForge)
                 {
                     case 1:
+                        IronI.SetActive(false);
+                        IronII.SetActive(true);
                         break;
                     case 2:
-                        break;
-                    case 3: 
+                        IronII.SetActive(false);
+                        IronIII.SetActive(true);
+                        Text2.color = Color.green;
+                        phase++;
                         break;
                 }
             }
@@ -47,6 +56,33 @@ public class ForjarArmaPuzzle : DropReceiver
             phase++;
             Text1.color = Color.green;
         }
-    }
+        if(phase == 2 && gameObj == IronIII)
+        {
+            IronIII.SetActive(false);
+            SwordCold.SetActive(true);
+            Text3.color = Color.green;
+            phase++;
+        }
+        if (phase == 3 && gameObj == SwordCold)
+        {
+            SwordCold.SetActive(false);
+            ColdSwordInTable.SetActive(true);
+            Text4.color = Color.green;
+            phase++;
+        }
+        if (phase == 4 && gameObj == Mango)
+        {
+            Mango.SetActive(false);
+            FinishedSwordInTable.SetActive(true);
+            Text5.color = Color.green;
 
- }
+            uCore.Audio.PlaySFX("SwordSoundEffect");
+            Invoke("Finished", 3.0f);
+        }
+    }
+    void Finished()
+    {
+        //tendra que llamar a la transicion 4-5
+        FindObjectOfType<EndNodeFunctions>().TransitionActIVActV();
+    }
+}

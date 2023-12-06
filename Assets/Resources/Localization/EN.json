@@ -111,8 +111,26 @@
     { "key": "ActIVMessageI", "value": "Ethan pasea por el pueblo mientras disfruta de la tranquilidad y felicidad que ve en el ambiente. Se da cuenta de que el sol está en el punto más alto del cielo y decide ir a casa. Ahí, se encuentra con su padre." },
     { "key": "ActIVMessageII", "value": "¡Hijo! Ya he conseguido las maderas... los hierros..." },
     { "key": "ActIVMessageIII", "value": "¡Genial! Pues deberíamos forjar la espada cuando antes... Estoy seguro de que Blackthorn estará al llegar." },
-    { "key": "ActIVMessageIV", "value": "Blackthorn es una persona vengativa y rencorosa, sus criaturas místicas atacarán el pueblo algún día en busca de sangre; cuando antes tengamos la espada, mejor." }
+    { "key": "ActIVMessageIV", "value": "Blackthorn es una persona vengativa y rencorosa, sus criaturas místicas atacarán el pueblo algún día en busca de sangre; cuando antes tengamos la espada, mejor." },
 
-    
+    { "key": "ActVMessageI", "value": "Ethan, nota nerviosismo, la situación es muy delicada, las calles hablan, el miedo vuelve a estar presente; podría haber una batalla que dependa completamente de él, cuyos finales pueden ser la libertad o la masacre de todo un pueblo." },
+    { "key": "ActVMessageII", "value": "Vivir en Dunewick fue una experiencia dura e implacable para Ethan. La ciudad medieval era un lugar donde la existencia diaria era una lucha constante, un marcado contraste con las comodidades y conveniencias del mundo moderno que alguna vez había dado por sentado." },
+    { "key": "ActVMessageIII", "value": "En Dunewick, la vida familiar de Ethan se vio empañada por el alcoholismo de su padre, un problema profundo y enconado en un mundo donde los mecanismos para afrontar la situación eran escasos." },
+    { "key": "ActVMessageIV", "value": "La dureza del entorno había llevado a su padre a buscar consuelo en la botella, y Ethan a menudo se había sentido impotente ante este vicio destructivo." },
+    { "key": "ActVMessageV", "value": "La gente de Dunewick estaba endurecida por el duro entorno y sus corazones estaban protegidos por una conciencia constante de los peligros que acechaban más allá de los muros de la ciudad. La crueldad era una forma de vida, la supervivencia a cualquier precio, y la confianza era un bien escaso." },
+    { "key": "ActVMessageVI", "value": "Ethan luchó por encajar, por ganarse la confianza y el respeto de quienes lo rodeaban, y a menudo se sentía como un extraño en un mundo que exigía conformidad." },
+    { "key": "ActVMessageVII", "value": "Cuando Ethan enfrentó estas dificultades de frente, comenzó a cambiar." },
+    { "key": "ActVMessageVIII", "value": "Se encontró sacando fuerzas de su interior, desarrollando un coraje y una resiliencia que nunca había conocido en el mundo moderno." },
+    { "key": "ActVMessageIX", "value": "Se desarrolló como persona para ser fuerte, tuvo que luchar contra peligros y superar las dificultades de su vida diaria en Dunewick. Pero sentía una profunda nostalgia a su origen. La vida en Dunewick era extremadamente difícil, cualquier aventura, por muy bonita que fuese su relato, podía matarle." },
+    { "key": "ActVMessageX", "value": "¡Hey! No me ha costado mucho encontrarte... ¡Pero vengo corriendo!" },
+    { "key": "ActVMessageXI", "value": "¡Hola! ¿Y por qué tantas prisas?" },
+    { "key": "ActVMessageXII", "value": "Dicen que esta noche una de las mágicas criaturas de Blackthorn asediará el pueblo... También hay un rumor; la muerte de esta criatura invocará una supuesta llamada 'grieta del deseo'." },
+    { "key": "ActVMessageXIII", "value": "Vaya... Gracias por el aviso; cómo ya sabes, llevo preparándome mucho tiempo para esta batalla. Estoy listo." },
+    { "key": "ActVMessageXIV", "value": "Esa misma noche, Ethan derrotó a un feroz dragón que venía a hacer el mal, destruir, provocar terror en Dunewick. Cuándo Blackthorn llegó, visiblemente debilitado, vio que no estaban las cosas como esperaban." },
+    { "key": "ActVMessageXV", "value": "Ahí, Blackthorn pidió redención, y juró que nunca más volvería a pisar Dunewick. Después de la batalla y la consiguiente celebración; Ethan fue al peñón de Dunewick, dónde tenía pensado acabar de cerrar la velada mágica que había sucedido." },
+    { "key": "ActVMessageXVI", "value": "En un instante, Ethan subió la cabeza, y vio una mágica, enorme y brillante estrella fugaz cruzando el cielo." },
+
+    { "key": "FinalNodeOptionOne", "value": "Deseo volver al mundo real" },  
+    { "key": "FinalNodeOptionTwo", "value": "Deseo seguir en Dunewick" }    
   ]
 }

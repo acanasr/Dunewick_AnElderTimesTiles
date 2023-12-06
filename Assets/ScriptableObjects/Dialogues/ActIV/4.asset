@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 861b26488859daa418a527629e6e7b0f, type: 3}
   startNodeFunctionID: 
-  endNodeFunctionID: 
+  endNodeFunctionID: 0d000000
   keyName: alistair
   keyMessage: ActIVMessageIV
   speakers:
