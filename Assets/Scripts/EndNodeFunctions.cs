@@ -100,13 +100,16 @@ public class EndNodeFunctions : MonoBehaviour
                 TransitionActIIIActIV();
                 break;
             case NodeFunctionsEnum.FINAL:
-                fade.FadeIn(()=> ActText.text = "THE END.   Done by Albert Cañas");
-                Invoke("Close", 5.0f);
+                Invoke("End", 3.0f);
                 break;
 
         }
     }
-
+    void End()
+    {
+        fade.FadeIn(() => ActText.text = "THE END.   Done by Albert Cañas");
+        Invoke("Close", 10.0f);
+    }
     void Close()
     {
         Application.Quit();
@@ -221,6 +224,8 @@ public class EndNodeFunctions : MonoBehaviour
 
     public void TransitionActIVActV()
     {
+        textSwordPuzzle.SetActive(false);
+        objSwordPuzzle.SetActive(false);
         fade.FadeIn(() => ActText.text = "Tres meses más tarde");
         uCore.Audio.StopAllSoundtracks();
         MusicThemeActV();

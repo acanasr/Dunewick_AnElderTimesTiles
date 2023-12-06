@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: FinalNode
   m_EditorClassIdentifier: 
   background: {fileID: 21300000, guid: 02e0ef80bee6ed84ebf6a85fec823f88, type: 3}
-  startNodeFunctionID: 
-  endNodeFunctionID: 00000000
+  startNodeFunctionID: 12000000
+  endNodeFunctionID: 12000000
   options:
   - keyText: FinalNodeOptionOne
     next: {fileID: 0}
